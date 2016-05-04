@@ -1,0 +1,7 @@
+<Files .htaccess>
+	order allow,deny
+	deny from all
+</Files>
+RewriteEngine on
+RewriteCond $1 !^(index\.php|robots\.txt|sitemap\.xml|css|fonts|img|js)
+RewriteRule ^(.*)$ index.php/$1 [L]
